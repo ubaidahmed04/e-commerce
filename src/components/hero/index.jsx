@@ -9,8 +9,9 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Button from '@mui/material/Button';
 
 export default function Hero() {
+
   return (
-    <React.Fragment>
+    <React.Fragment >
       <CssBaseline />
       <Container maxWidth="lg" className='hero'>
         <Box sx={{ flexGrow: 1 }}>

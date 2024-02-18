@@ -34,17 +34,17 @@ function Header(props) {
         Fashion
       </Typography>
       <Divider />
-        {navItems.map((item, i) => (
-      <List key={i}>
+      {navItems.map((item, i) => (
+        <List key={i}>
           <Button
             key={item.label || item}
-            sx={{ color: item.label === 'Sign up' ? '#fff' : '' }} // Set color only for Sign up button
+            sx={{ color: item.label === 'Sign up' ? '#fff' : '' }}
             className={`${item.className} nav-menu`}
           >
             {item.label || item}
           </Button>
-      </List>
-        ))}
+        </List>
+      ))}
     </Box>
   );
 
@@ -63,7 +63,14 @@ function Header(props) {
               onClick={handleDrawerToggle}
               sx={{ mr: 2, display: { sm: 'none' } }}
             >
-              <MenuIcon />
+              {/* <MenuIcon /> */}
+              <div className="hamburger">
+                <div className="hamburger__container">
+                  <div className="hamburger__inner" />
+                  <div className="hamburger__hidden" />
+                </div>
+              </div>
+
             </IconButton>
             <Typography
               variant="h6"
@@ -76,7 +83,7 @@ function Header(props) {
               {navItems.map((item) => (
                 <Button
                   key={item.label || item}
-                  sx={{ color: item.label === 'Sign up' ? '#fff' : '' }} 
+                  sx={{ color: item.label === 'Sign up' ? '#fff' : '' }}
                   className={`${item.className} nav-menu`}
                 >
                   {item.label || item}

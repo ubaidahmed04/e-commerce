@@ -5,17 +5,20 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
-
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Cards({ productsArr }) {
-
-  console.log(productsArr)
+  useEffect(() => {
+    AOS.init();
+}, [])
   return (
-    <div style={{display: 'flex', justifyContent: 'space-between'}}>
+    <div className='cards'>
       {productsArr ? (
         <>
-          {productsArr.map(v => (
-            <Card key={v.id}  sx={{ maxWidth: 280 }}>
+          {productsArr.slice(0, 3).map(v => (
+            <Card key={v.id} sx={{ maxWidth: 280 }} data-aos="zoom-out">
               <CardMedia
                 component="img"
                 height="300"
@@ -40,17 +43,17 @@ export default function Cards({ productsArr }) {
         </>
       ) : (
 
-        <>
-
+        <div className='update-message' data-aos="zoom-in">
           <CardContent>
             <Typography variant="h5" color="text.secondary">
-              Hoodies/T-Shirt
+              Sorry, We're currently updating our product inventory.
             </Typography>
             <Typography variant="body1" color="text.secondary">
-              Explore Now!
+              Please check back later.
             </Typography>
           </CardContent>
-        </>
+        </div>
+
       )
 
       }

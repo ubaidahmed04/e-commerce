@@ -1,25 +1,19 @@
 import './brands.scss'
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import { brandsImageArr } from '../../assets';
 import CssBaseline from '@mui/material/CssBaseline';
-
-
-// const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-// }));
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Brands() {
-
+    useEffect(() => {
+        AOS.init();
+      }, [])
     
     return (
-        <>
+        <div data-aos="zoom-out">
             <React.Fragment>
                 <CssBaseline />
                 <Box sx={{ overflowX: 'scroll' }} className="brands">
@@ -32,7 +26,7 @@ export default function Brands() {
                     </div>
                 </Box>
             </React.Fragment>
-        </>
+        </div>
     );
 }
 
