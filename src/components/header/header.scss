@@ -1,0 +1,33 @@
+@import "./../varaibles.scss";
+@font-face {
+  font-family: "poppins";
+  src: url("./../../assets/fonts/Poppins/Poppins-Regular.ttf")
+    format("truetype");
+}
+
+// Navbar CSS
+.header {
+  // Navbar CSS
+  .navbar {
+    background-color: $white;
+    color: $black;
+    box-shadow: none;
+  }
+  
+  .signup-button {
+    // Sign up btn CSS
+    background-color: $black;
+    color: $white !important;
+    &:hover {
+      color: $black !important;
+    }
+  }
+
+  // Nav Menu CSS
+  .nav-menu {
+    color: $black;
+    font-family: "poppins";
+  }
+}
+
+// Hero CSS 

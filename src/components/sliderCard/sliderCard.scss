@@ -1,0 +1,130 @@
+
+$gutter: 30px;
+$gutter-half: ($gutter / 2);
+
+$c-bg: #fff;
+$c-primary: #333;
+$c-secondary: #ccc;
+
+[data-am-cardslider] {
+  $cs-max-slides: 3;
+
+  // Mixin to handle slide inactive state
+  @mixin cs-inactive($translate, $scale, $z-index) {
+    transform: translate($translate) scale($scale);
+    z-index: $z-index;
+  }
+
+  overflow: hidden;
+  padding: $gutter-half $gutter;
+
+  // Radio
+
+  input {
+    &[type="radio"] {
+      position: fixed;
+      top: -9999px;
+      visibility: hidden;
+
+      &:checked {
+        @for $i from 1 through $cs-max-slides {
+          &:nth-of-type(#{$i}) {
+            ~ .cs-slide-container {
+              .cs-slide {
+                // Active slide
+                &:nth-child(#{$i}) {
+                  transform: translate(0) scale(1);
+                  position: relative;
+                  cursor: default;
+                  z-index: 3;
+                }
+
+                // Previous slide
+                @if $i - 1 >= 0 {
+                  &:nth-child(#{$i - 1}) {
+                    @include cs-inactive(-100px, 0.85, 2);
+                  }
+                }
+
+                // Lower than previous
+                @if $i - 2 > 0 {
+                  &:nth-child(-n + #{$i - 2}) {
+                    @include cs-inactive(-210px, 0.65, 1);
+                  }
+                }
+
+                // Next slide
+                @if $i + 1 <= $cs-max-slides {
+                  &:nth-child(#{$i + 1}) {
+                    @include cs-inactive(100px, 0.85, 2);
+                  }
+                }
+
+                // Higher than next
+                @if $i + 2 <= $cs-max-slides {
+                  &:nth-child(n + #{$i + 2}) {
+                    @include cs-inactive(210px, 0.65, 1);
+                  }
+                }
+              }
+            }
+
+            ~ .cs-indicator-container {
+              .cs-indicator {
+                &:nth-child(#{$i}) {
+                  background-color: $c-primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Slides
+
+  .cs-slide-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cs-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    transition: transform 200ms ease;
+    cursor: pointer;
+  }
+
+  .cs-slide-content {
+    background-color: $c-bg;
+    padding: $gutter-half;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  // Indicators
+
+  .cs-indicator-container {
+    text-align: center;
+  }
+
+  .cs-indicator {
+    $indicator-size: 12px;
+
+    display: inline-block;
+    width: $indicator-size;
+    height: $indicator-size;
+    margin-top: $gutter;
+    border-radius: 50%;
+    background-color: $c-secondary;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+  }
+}

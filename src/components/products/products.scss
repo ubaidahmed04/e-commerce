@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "poppins";
+  src: url("./../../assets/fonts/Poppins/Poppins-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "poppins bold";
+  src: url("./../../assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+}
+
+.card-main {
+  padding: 20px 30px;
+  font-family: "poppins bold";
+  .card-header {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 2em;
+      z-index: 1;
+      position: relative;
+    }
+    img {
+      height: 22px;
+      margin-left: -100px;
+      margin-top: 20px;
+      z-index: 0;
+      position: relative;
+    }
+  }
+}
