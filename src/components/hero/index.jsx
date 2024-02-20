@@ -11,9 +11,10 @@ import Button from '@mui/material/Button';
 export default function Hero() {
 
   return (
-    <React.Fragment >
+  <div className='hero'>
+      <React.Fragment >
       <CssBaseline />
-      <Container maxWidth="lg" className='hero'>
+      <Container maxWidth="lg" className='main'>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid xs={12} sm={6} md={5}>
@@ -35,6 +36,7 @@ export default function Hero() {
         </Box>
       </Container>
     </React.Fragment>
+  </div>
   );
 }
 
