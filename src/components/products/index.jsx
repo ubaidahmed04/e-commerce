@@ -1,4 +1,4 @@
-import './products.scss';
+import './../style.scss';
 import { heroVector } from '../../assets';
 import Card from '../card';
 import * as React from 'react';

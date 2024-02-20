@@ -1,4 +1,4 @@
-import './brands.scss'
+import './../style.scss'
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { brandsImageArr } from '../../assets';
@@ -13,7 +13,7 @@ export default function Brands() {
       }, [])
     
     return (
-        <div data-aos="zoom-out">
+        <section data-aos="fade-up">
             <React.Fragment>
                 <CssBaseline />
                 <Box sx={{ overflowX: 'scroll' }} className="brands">
@@ -26,7 +26,7 @@ export default function Brands() {
                     </div>
                 </Box>
             </React.Fragment>
-        </div>
+        </section>
     );
 }
 

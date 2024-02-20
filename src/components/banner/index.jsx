@@ -1,6 +1,5 @@
-
-import './banner.scss'
-import { bannerImg, heroVector } from './../../assets';
+import './../style.scss'
+import { bannerImg } from './../../assets';
 
 import * as React from 'react';
 import { useEffect } from 'react';
@@ -18,33 +17,34 @@ function Banner() {
   }, [])
 
   return (
-    <div data-aos="fade-up" className='banner' style={{ backgroundColor: "#E6C744" }}>
-      <React.Fragment>
-        <CssBaseline />
-        <Container maxWidth="lg" className='main'>
-          <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
-              <Grid xs={0} sm={5} md={6} className='hero-img'>
-                <img src={bannerImg} alt="modal-image" />
-              </Grid>
-              <Grid xs={12} sm={7} md={6}>
-                <div className='hero-text'>
-                  <h1>
-                    <span>Payday</span> sale now
-                  </h1>
-                  <p>Spend minimal $100 get 30% off
-                    voucher code for your next purchase</p>
-                  <h5>1 June - 10 June 2021</h5>
-                  <p>*Terms & Conditions apply</p>
-                  <Button variant="contained" className='signup-button'>Shop now</Button>
-                </div>
-              </Grid>
+      <div className='banner'>
+        <React.Fragment>
+          <CssBaseline />
+          <Container maxWidth="lg" className='main'  data-aos="fade-up">
+            <Box sx={{ flexGrow: 1 }}>
+              <Grid container spacing={2}>
+                <Grid xs={0} sm={5} md={6} className='hero-img'>
+                  <img src={bannerImg} alt="modal-image" />
+                </Grid>
+                <Grid xs={12} sm={7} md={6}>
+                  <div className='hero-text'>
+                    <h1>
+                      <span>Payday</span> sale now
+                    </h1>
+                    <p>Spend minimal $100 get 30% off
+                      voucher code for your next purchase</p>
+                    <h5>1 June - 10 June 2021</h5>
+                    <p>*Terms & Conditions apply</p>
+                    <Button variant="contained" className='signup-button'>Shop now</Button>
+                  </div>
+                </Grid>
 
-            </Grid>
-          </Box>
-        </Container>
-      </React.Fragment>
-    </div>
+              </Grid>
+            </Box>
+          </Container>
+        </React.Fragment>
+      </div>
+
   )
 }
 

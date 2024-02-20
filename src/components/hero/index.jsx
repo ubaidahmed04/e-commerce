@@ -1,4 +1,4 @@
-import './hero.scss'
+import './../style.scss'
 import { heroImg, heroVector } from '../../assets';
 
 import * as React from 'react';

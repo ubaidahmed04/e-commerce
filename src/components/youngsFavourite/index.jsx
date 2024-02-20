@@ -1,4 +1,4 @@
-import './youngsFavourite.scss'
+import './../style.scss'
 import * as React from 'react';
 import { cardImg, cardImg2 } from './../../assets'
 import CssBaseline from '@mui/material/CssBaseline';

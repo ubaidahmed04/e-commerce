@@ -6,3 +6,19 @@ $grey: #C2C8DA;
 $black: #000;
 $light-white: #F4F6F5;
 
+// Header Variables
+$h-padding: 15px;
+$h-width: 30px;
+$h-height: 24px;
+$h-background-color: transparent;
+$h-line-color: #000;
+$h-hover-line-color: red;
+$h-line-height: 2px;
+$h-border-radius: 4px;
+$h-transition-time: 0.4s;
+$h-transition-function: ease;
+$h-transition-opacity: 0;
+$h-vertical-gap: 12px;
+$h-initial-opposition: 5px;
+$h-hide-distance: $h-width + $h-padding;
+
