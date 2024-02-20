@@ -9,6 +9,7 @@ import List from '@mui/material/List';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { logo } from './../../assets'
 import "./../style.scss";
 
 const drawerWidth = 240;
@@ -24,7 +25,7 @@ function Header(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} className="header">
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" sx={{ my: 2 }} className='web-name'>
         Fashion
       </Typography>
       <Divider />
@@ -50,26 +51,34 @@ function Header(props) {
         <CssBaseline />
         <AppBar component="nav" className='navbar'>
           <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
-            >
-              {/* <MenuIcon /> */}
-              <div className="hamburger">
-                <div className="hamburger__container">
-                  <div className="hamburger__inner" />
-                  <div className="hamburger__hidden" />
+            <div className='burger-section'>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: 'none' }   }}
+              >
+                {/* <MenuIcon /> */}
+                <div className="hamburger">
+                  <div className="hamburger__container">
+                    <div className="hamburger__inner" />
+                    <div className="hamburger__hidden" />
+                  </div>
                 </div>
-              </div>
 
-            </IconButton>
+              </IconButton>
+              <IconButton
+                sx={{ mr: 2, display: { sm: 'none' } }}
+              >
+                <img src={logo} alt="logo" height='60px' />
+              </IconButton>
+            </div>
             <Typography
               variant="h6"
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              className='web-name'
             >
               Fashion
             </Typography>

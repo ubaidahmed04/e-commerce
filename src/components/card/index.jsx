@@ -12,7 +12,8 @@ import 'aos/dist/aos.css';
 export default function Cards({ productsArr }) {
   useEffect(() => {
     AOS.init();
-}, [])
+  }, [])
+  
   return (
     <div className='cards'>
       {productsArr ? (

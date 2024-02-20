@@ -23,11 +23,11 @@ function Banner() {
           <Container maxWidth="lg" className='main'  data-aos="fade-up">
             <Box sx={{ flexGrow: 1 }}>
               <Grid container spacing={2}>
-                <Grid xs={0} sm={5} md={6} className='hero-img'>
+                <Grid xs={0} sm={5} md={6} className='banner-img'>
                   <img src={bannerImg} alt="modal-image" />
                 </Grid>
                 <Grid xs={12} sm={7} md={6}>
-                  <div className='hero-text'>
+                  <div className='banner-text'>
                     <h1>
                       <span>Payday</span> sale now
                     </h1>

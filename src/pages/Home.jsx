@@ -1,4 +1,4 @@
-import { Header, Hero, Brands, Products, Banner, YoungsFavourite} from "./../components";
+import { Header, Hero, Brands, Products, Banner, YoungsFavourite, OurApp, Community, Footer} from "./../components";
 
 const Home = () => {
    
@@ -10,6 +10,9 @@ const Home = () => {
             <Products/>
             <Banner />
             <YoungsFavourite />
+            <OurApp />
+            <Community />
+            <Footer />
         </>
     )
 }

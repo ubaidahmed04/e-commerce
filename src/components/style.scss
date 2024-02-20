@@ -1,29 +1,36 @@
 @import "./varaibles.scss";
 @font-face {
-    font-family: 'caveat';
-    src: url('./../assets/fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype'),  
-  }
-  @font-face {
-    font-family: 'inter';
-    src: url('./../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf') forma('truetype'),     
-  }
-  @font-face {
-    font-family: 'open sans';
-    src: url('./../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype'),      
-  }
-  @font-face {
-    font-family: 'Poppins';
-    src: url("./../assets/fonts/Poppins/Poppins-Regular.ttf") format('truetype'), 
-  }
-  @font-face {
-    font-family: 'roboto';
-    src: url('./../assets//fonts/Roboto/Roboto-Black.ttf') format('truetype');
-  }
-  @font-face {
-    font-family: 'Poppins bold';
-    src: url('./../assets//fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
-  }
-
+  font-family: "caveat";
+  src: url("./../assets/fonts/Caveat/Caveat-VariableFont_wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "caveat";
+  src: url("./../assets/fonts/Caveat/static/Caveat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "inter";
+  src: url("./../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf")
+    forma("truetype");
+}
+@font-face {
+  font-family: "open sans";
+  src: url("./../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("./../assets//fonts/Roboto/Roboto-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins bold";
+  src: url("./../assets//fonts/Poppins/Poppins-ExtraBold.ttf")
+    format("truetype");
+}
 
 // Header
 @mixin line-props {
@@ -145,10 +152,21 @@
 // Navbar CSS
 .header {
   // Navbar CSS
+  .web-name {
+    font-size: 2em;
+    font-family: "caveat", sans-serif;
+  }
   .navbar {
     background-color: $white;
     color: $black;
     box-shadow: none;
+    @media (max-width: 600px) {
+      .burger-section {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
   }
 
   .signup-button {
@@ -170,72 +188,72 @@
 // Hero CSS
 
 .hero {
-    margin-top: -40px;
-    background-color: $light-white;
-    border-radius: 20px;
-    
-    max-height: 90vh;
-    overflow: hidden;
-    
-    // hero text section
-    .hero-text {
-      font-family: "Poppins", sans-serif;
-      padding: 1.8rem 0px;
-      margin-left: 50px;
-      color: $black;
-      
-      h1 {
-        line-height: 85px;
-        font-family: "Poppins bold", sans-serif;
-        font-size: 4em;
-        text-transform: uppercase;
-      }
-      h1 span:first-child {
-        background-color: $white;
-      }
-  
-      h1 span:nth-child(2) {
-        background-color: $light-yellow;
-      }
-      h1 span:first-child,
-      h1 span:nth-child(2) {
-        padding: 0px 16px;
-      }
-      div {
-        margin-top: 8px;
-        .signup-button {
-          margin-left: 2em;
-          color: $white;
-          background-color: $black;
-        }
-      }
+  margin-top: -40px;
+  background-color: $light-white;
+  border-radius: 20px;
+
+  max-height: 90vh;
+  overflow: hidden;
+
+  // hero text section
+  .hero-text {
+    font-family: "Poppins", sans-serif;
+    padding: 1.8rem 0px;
+    margin-left: 50px;
+    color: $black;
+
+    h1 {
+      line-height: 85px;
+      font-family: "Poppins bold", sans-serif;
+      font-size: 4em;
+      text-transform: uppercase;
     }
-  
-    @media (max-width: 546px) {
-        .hero-text {
-          margin: 0;
-          h1 {
-            font-size: 3.2em;
-          }
-        }
-    } 
-  
-    // hero image section
-  
-    .hero-img {
-      position: relative;
-      
-      img {
-        filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.321));
-        overflow: visible;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
+    h1 span:first-child {
+      background-color: $white;
+    }
+
+    h1 span:nth-child(2) {
+      background-color: $light-yellow;
+    }
+    h1 span:first-child,
+    h1 span:nth-child(2) {
+      padding: 0px 16px;
+    }
+    div {
+      margin-top: 8px;
+      .signup-button {
+        font-family: "Poppins", sans-serif;
+        margin-left: 2em;
+        color: $white;
+        background-color: $black;
       }
     }
   }
-  
+
+  @media (max-width: 546px) {
+    .hero-text {
+      margin: 0;
+      h1 {
+        font-size: 3.2em;
+      }
+    }
+  }
+
+  // hero image section
+
+  .hero-img {
+    position: relative;
+
+    img {
+      filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.321));
+      overflow: visible;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
 
 // Brands
 
@@ -325,25 +343,25 @@
 // Products
 
 .card-main {
-    padding: 20px 0px;
-     font-family: "Poppins bold";
-     .card-header {
-       display: flex;
-       align-items: center;
-       span {
-         font-size: 2em;
-         z-index: 1;
-         position: relative;
-       }
-       img {
-         height: 22px;
-         margin-left: -100px;
-         margin-top: 20px;
-         z-index: 0;
-         position: relative;
-       }
-     }
-   }
+  padding: 20px 0px;
+  font-family: "Poppins bold";
+  .card-header {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 2em;
+      z-index: 1;
+      position: relative;
+    }
+    img {
+      height: 22px;
+      margin-left: -100px;
+      margin-top: 20px;
+      z-index: 0;
+      position: relative;
+    }
+  }
+}
 
 // Banner
 
@@ -355,7 +373,7 @@
     background-color: $yellow;
     overflow: hidden;
     // hero text section
-    .hero-text {
+    .banner-text {
       font-family: "Poppins", sans-serif;
       padding: 5rem 0px;
       margin-left: 50px;
@@ -382,16 +400,17 @@
         margin-top: 1em;
       }
       .signup-button {
+        font-family: "Poppins", sans-serif;
         margin-top: 1em;
         color: $white;
         background-color: $black;
       }
     }
 
-// hero image section
+    // hero image section
 
     @media (max-width: 546px) {
-      .hero-text {
+      .banner-text {
         margin: 0;
         h1 {
           line-height: 1.4em;
@@ -399,7 +418,7 @@
         }
       }
     }
-    .hero-img {
+    .banner-img {
       position: relative;
       img {
         filter: drop-shadow(120px 50px 40px rgba(0, 0, 0, 0.341));
@@ -413,7 +432,7 @@
       }
     }
     @media (max-width: 546px) {
-      .hero-img {
+      .banner-img {
         display: none;
       }
     }
@@ -423,67 +442,218 @@
 // Younger Favourite Cards
 
 .youngs-favourite {
-    margin: 1.5em 0em;
-    .main {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      .favourite-card {
-        width: 45%;
-        overflow: hidden;
-  
-        .title-section {
-          padding: 0em 1em;
-          div {
-            font-family: "Poppins", sans-serif;
-            display: flex;
-  
-            .title {
-              width: 80%;
-              line-height: 1.3em;
-              color: $black;
-              display: -webkit-box;
-              display: -moz-box;
-              -webkit-box-orient: vertical;
-              -moz-box-orient: vertical;
-              line-clamp: 2;
-              -webkit-line-clamp: 2;
-              max-height: 3em;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: normal;
-            }
-  
-            .icon {
-              display: flex;
-              justify-content: end;
-              align-items: center;
-              width: 20%;
-              color: #666666;
-              cursor: pointer;
-            }
-          }
-        }
-  
+  margin: 1.5em 0em;
+  .main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    .favourite-card {
+      width: 45%;
+      overflow: hidden;
+
+      .title-section {
+        padding: 0em 1em;
         div {
-          img {
-            object-position: top;
-            object-fit: cover;
-            height: 20em;
-            width: 100%;
-            border-radius: 20px;
+          font-family: "Poppins", sans-serif;
+          display: flex;
+
+          .title {
+            width: 80%;
+            line-height: 1.3em;
+            color: $black;
+            display: -webkit-box;
+            display: -moz-box;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
+            max-height: 3em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+          }
+
+          .icon {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 20%;
+            color: #666666;
+            cursor: pointer;
           }
         }
       }
-    }
-    @media (max-width: 768px) {
-      .main {
-        gap: 30px;
-        .favourite-card {
+
+      div {
+        img {
+          object-position: top;
+          object-fit: cover;
+          height: 20em;
           width: 100%;
+          border-radius: 20px;
         }
       }
     }
   }
-  
+  @media (max-width: 768px) {
+    .main {
+      gap: 30px;
+      .favourite-card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Community
+
+.community {
+  background-color: $yellow;
+  .main {
+    padding: 4em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .main-heading,
+  .text {
+    text-align: center;
+    color: $white;
+    width: 70%;
+  }
+  @media (max-width: 546px) {
+    .main-heading,
+    .text {
+      width: 98%;
+    }
+  }
+  .main-heading {
+    font-family: "Poppins bold", sans-serif;
+  }
+  .text {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .text-field {
+    .paper {
+      padding-left: 10px;
+      border-radius: 10px;
+      margin-top: 20px;
+      .input {
+        font-family: "Poppins", sans-serif;
+        padding-left: 5px;
+        flex: 1;
+      }
+      .btn {
+        border-radius: 5px;
+        background-color: $black;
+      }
+    }
+  }
+}
+
+//Footer
+
+.footer {
+  background-color: $black;
+  padding: 4em 6em;
+  .section-one {
+    .icons {
+      display: flex;
+      gap: 10px;
+      margin-left: -10px;
+    }
+    .icons > * {
+      cursor: pointer;
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      color: $grey;
+      transition: 0.4s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $yellow;
+        transition: 0.5s;
+        transform: scale(0.9);
+        z-index: -1;
+      }
+      &:hover::before {
+        transform: scale(1.1);
+        // box-shadow: 0 0 15px $yellow;
+        filter: drop-shadow(0 0 15px $yellow);
+      }
+      &:hover {
+        color: $yellow;
+        // box-shadow: 0 0 5px $yellow;
+        filter: drop-shadow(0 0 5px $yellow);
+        text-shadow: 0 0 5px $light-yellow;
+        color: $black;
+      }
+    }
+  }
+
+  .section-one > * {
+    font-family: "Poppins", sans-serif;
+    border: none;
+    box-shadow: none;
+    color: $white;
+    background-color: transparent;
+  }
+  .section-two > *,
+  .section-three > *,
+  .section-four > * {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    box-shadow: none;
+    color: $white;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .section-two > *:not(:first-child),
+  .section-three > *:not(:first-child),
+  .section-four > *:not(:first-child) {
+    transition: 0.3s;
+    &:hover {
+      color: $yellow;
+    }
+  }
+  .section-one > *:first-child {
+    font-family: "caveat", sans-serif;
+  }
+  .section-two > *:first-child,
+  .section-three > *:first-child,
+  .section-four > *:first-child {
+    text-align: center;
+    font-family: "caveat", sans-serif;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 40px 0px 16px 0px;
+
+    .section-one > * {
+      text-align: center;
+      margin: 0px 20px;
+    }
+    .section-one {
+      .icons {
+        justify-content: center;
+      }
+    }
+  }
+}

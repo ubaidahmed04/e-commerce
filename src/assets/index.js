@@ -3,6 +3,8 @@ import heroVector from './images/Hero-Vector.png'
 import bannerImg from './images/banner.png'
 import cardImg from './images/cardImg.jpg'
 import cardImg2 from './images/cardImg2.jpg'
+import ourAppImg from './images/our-app.webp'
+import logo from './images/logo-new.png'
 
 // brand images
 import amazon from './images/amazon-vector.png'
@@ -14,4 +16,4 @@ import shopify from './images/shopify-vector.webp'
 
 const brandsImageArr = [amazon, hm, lacoste, levis, obey, shopify]
 
-export {heroImg, heroVector, brandsImageArr, bannerImg, cardImg, cardImg2};
+export {heroImg, heroVector, brandsImageArr, bannerImg, cardImg, cardImg2, ourAppImg, logo};
