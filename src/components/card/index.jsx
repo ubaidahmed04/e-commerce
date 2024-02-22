@@ -28,14 +28,14 @@ export default function Cards({ productsArr }) {
               />
               <CardContent>
                 <div className="title-section">
-                  <Typography variant="h6" className='title'>
+                  <Typography className='title'>
                     {v.title}
                   </Typography>
                   <Typography variant="h6" className='icon'>
                     <TrendingFlatIcon />
                   </Typography>
                 </div>
-                <Typography variant="body1" color="text.secondary">
+                <Typography variant="body1" color="text.secondary" className='slogan'>
                   {v.slogan}
                 </Typography>
               </CardContent>

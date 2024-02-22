@@ -51,7 +51,7 @@ const YoungsFavourite = () => {
                                         <TrendingFlatIcon />
                                     </Typography>
                                 </div>
-                                <Typography variant="body2">
+                                <Typography variant="body2" className='slogan'>
                                     {v.slogan}
                                 </Typography>
                                 </div>
