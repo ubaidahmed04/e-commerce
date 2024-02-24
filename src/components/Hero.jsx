@@ -1,5 +1,5 @@
-import './../style.scss'
-import { heroImg, heroVector } from '../../assets';
+import './style.scss'
+import { heroImg, heroVector } from '../assets';
 
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';

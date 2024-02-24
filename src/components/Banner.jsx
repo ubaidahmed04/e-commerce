@@ -1,5 +1,5 @@
-import './../style.scss'
-import { bannerImg } from './../../assets';
+import './style.scss'
+import { bannerImg } from '../assets';
 
 import * as React from 'react';
 import { useEffect } from 'react';

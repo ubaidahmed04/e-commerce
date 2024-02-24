@@ -1,11 +1,11 @@
-import './../style.scss';
-import { heroVector } from '../../assets';
-import Card from '../card';
+import './style.scss';
+import { heroVector } from '../assets';
+import Card from './Cards';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { heroImg, cardImg, cardImg2 } from '../../assets';
+import { heroImg, cardImg, cardImg2 } from '../assets';
 
 const productsArr = [
     {

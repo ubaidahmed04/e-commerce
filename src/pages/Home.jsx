@@ -1,10 +1,10 @@
-import { Header, Hero, Brands, Products, Banner, YoungsFavourite, OurApp, Community, Footer} from "./../components";
+import { Navbar, Hero, Brands, Products, Banner, YoungsFavourite, OurApp, Community, Footer} from "./../components";
 
 const Home = () => {
    
     return (
         <>
-            <Header />
+            <Navbar />
             <Hero />
             <Brands />
             <Products/>

@@ -17,7 +17,7 @@ $c-secondary: #ccc;
 
   overflow: hidden;
   padding: $gutter-half $gutter;
-
+  height: 320px;
   // Radio
 
   input {
@@ -83,8 +83,11 @@ $c-secondary: #ccc;
   }
 
   // Slides
-
-  .cs-slide-container {
+.slider-main {
+  height: 400px;
+  background-color: yellow;
+}
+.cs-slide-container {
     position: relative;
     width: 100%;
     max-width: 600px;

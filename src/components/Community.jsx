@@ -1,4 +1,4 @@
-import './../style.scss'
+import './style.scss'
 import React, {useEffect} from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -36,8 +36,8 @@ export default function Community() {
                 placeholder="Send your email"
                 inputProps={{ 'aria-label': 'search google maps' }}
               />
-              <IconButton type="button" sx={{ p: '5px' }} aria-label="search">
-                <Button variant="contained" className='btn'>send</Button>
+              <IconButton sx={{ p: '5px' }} aria-label="search" className='btn'>
+                send
               </IconButton>
             </Paper>
           </div>

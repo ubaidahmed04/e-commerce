@@ -1,12 +1,10 @@
-import { useState } from 'react'
-import './App.css'
 import Home from './pages/Home'
-
-
+import AppRouter from './router'
 function App() {
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      <AppRouter />
     </>
   )
 }

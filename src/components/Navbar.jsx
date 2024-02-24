@@ -1,3 +1,4 @@
+import "./style.scss";
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -9,19 +10,21 @@ import List from '@mui/material/List';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { logo } from './../../assets'
-import "./../style.scss";
+import { logo } from '../assets'
+import { NavLink } from 'react-router-dom'
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact', { label: 'Sign up', className: 'signup-button' }];
+const navItems = ['home', 'about', 'contact', { label: 'Sign up', className: 'signup-button' }];
 
-function Header(props) {
+function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  // console.log(navItems.map(item => item.label || item))
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} className="header">
@@ -31,13 +34,15 @@ function Header(props) {
       <Divider />
       {navItems.map((item, i) => (
         <List key={i}>
-          <Button
-            key={item.label || item}
-            sx={{ color: item.label === 'Sign up' ? '#fff' : '' }}
-            className={`${item.className} nav-menu`}
-          >
-            {item.label || item}
-          </Button>
+          <NavLink to={`/${item.label || item}`} key={item.label || item}>
+            <Button
+              
+              sx={{ color: item.label === 'Sign up' ? '#fff' : '' }}
+              className={`${item.className} nav-menu`}
+            >
+              {item.label || item}
+            </Button>
+          </NavLink>
         </List>
       ))}
     </Box>
@@ -57,7 +62,7 @@ function Header(props) {
                 aria-label="open drawer"
                 edge="start"
                 onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: 'none' }   }}
+                sx={{ mr: 2, display: { sm: 'none' } }}
               >
                 {/* <MenuIcon /> */}
                 <div className="hamburger">
@@ -84,13 +89,15 @@ function Header(props) {
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
-                <Button
-                  key={item.label || item}
-                  sx={{ color: item.label === 'Sign up' ? '#fff' : '' }}
-                  className={`${item.className} nav-menu`}
-                >
-                  {item.label || item}
-                </Button>
+                <NavLink to={`/${item.label || item}`} key={item.label || item}>
+                  <Button
+                    
+                    sx={{ color: item.label === 'Sign up' ? '#fff' : '' }}
+                    className={`${item.className} nav-menu`}
+                  >
+                    {item.label || item}
+                  </Button>
+                </NavLink>
               ))}
             </Box>
           </Toolbar>
@@ -129,4 +136,4 @@ function Header(props) {
 //   window: PropTypes.func,
 // };
 
-export default Header;
+export default Navbar;

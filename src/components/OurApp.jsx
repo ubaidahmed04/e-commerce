@@ -1,5 +1,5 @@
 import React from 'react'
-import {ourAppImg} from '../../assets'
+import {ourAppImg} from '../assets'
 
 const style ={
     display: 'flex',

@@ -1,7 +1,7 @@
-import './../style.scss'
+import './style.scss'
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { brandsImageArr } from '../../assets';
+import { brandsImageArr } from '../assets';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useEffect } from 'react';
 import AOS from 'aos';

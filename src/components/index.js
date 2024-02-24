@@ -1,11 +1,11 @@
-import Header from "./header";
-import Hero from "./hero";
-import Brands from "./brands";
-import Products from "./products";
-import Banner from "./banner";
-import YoungsFavourite from "./youngsFavourite";
-import OurApp from "./ourApp";
-import Community from "./community";
-import Footer from "./footer";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Brands from "./Brands";
+import Products from "./Products";
+import Banner from "./Banner";
+import YoungsFavourite from "./YoungsFavourite";
+import OurApp from "./OurApp";
+import Community from "./Community";
+import Footer from "./Footer";
 
-export {Header, Hero, Brands, Products, Banner, YoungsFavourite, OurApp, Community,Footer }
+export {Navbar, Hero, Brands, Products, Banner, YoungsFavourite, OurApp, Community,Footer }
